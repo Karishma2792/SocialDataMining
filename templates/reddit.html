@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Reddit Post</title>
+<style>
+ body
+    {
+    background-image: url({{ url_for('static', filename='wallpaper.jpg') }})
+    }
+.location {
+  border: 1px solid black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 800px;
+  margin-left: 200px;
+  background-color: lightblue;
+  border-radius: 25px;
+}
+.location1 {
+ 
+  margin-top: 80px;
+  color: white;
+  margin-left: 400px;
+  font-size: 150%;
+  
+}
+</style>
+<body>
+
+<p class=location1 ><b><i>Reddit API</i></b></p>
+<div class=location>
+<form action="{{ url_for('postReddit')}}" method="POST" align="center">
+<p color="white" font-size=14><b><i>What would you like to post??</i></b></p>
+<p><textarea rows=5 cols=25 name="title" placeholder="title"></textarea></p>
+<p><textarea rows=10 cols=50 name="message" placeholder="Message"></textarea></p>
+<p><input type="submit" value="Post"/>
+</form>
+</div>
+</body>
+</head>
+</html>
+

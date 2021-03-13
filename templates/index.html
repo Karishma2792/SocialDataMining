@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+    <title>Social Media App</title>
+    <style>
+    body
+    {
+    background-image: url({{ url_for('static', filename='wallpaper.jpg') }})
+    }
+    
+    .location{
+      margin-top: 100px;
+      margin-bottom: 100px;
+      margin-right: 800px;
+      margin-left: 200px;
+      color: white;
+     }
+   
+    img{
+      max-width: 24%;
+      height: auto;
+      border-radius: 50%;
+      border: 5px solid #555;
+    }
+
+    </style>
+    </head>
+
+    <body>
+        <div class=location>
+        <h1>Welcome, Karishma</h1>
+        <h3>Please select your Account!!</h3>
+        <div>
+        <div>
+        <a href="{{ url_for('postTweet') }}">
+        <img src="static/twitter.jpg"/>
+        </a>   
+        </div>
+        <div>
+        <a href="{{ url_for('postReddit') }}">
+        <img src="static/reddit.png"/>
+        </div>
+        <div>
+        <a href="link to mongodb atlas cluster">
+        <img src="static/mongo.jpg"/>
+        </div>
+        
+    </body>
+</html>

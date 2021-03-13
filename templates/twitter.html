@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Twitter Post</title>
+<style>
+ body
+    {
+    background-image: url({{ url_for('static', filename='wallpaper.jpg') }})
+    }
+.location {
+  border: 1px solid black;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 800px;
+  margin-left: 200px;
+  background-color: lightblue;
+  border-radius: 25px;
+}
+.location1 {
+ 
+  margin-top: 80px;
+   font-size: 150%;
+  margin-left: 400px;
+   color: white;
+}
+</style>
+<body>
+
+<p class=location1 ><b><i>Twitter API Form</i></b></p>
+
+<div class=location>
+<form action="{{ url_for('postTweet')}}" method="POST" align="center">
+<p color="white" font-size=14><b><i>What would you like to post??</i></b></p>
+<p><textarea rows=10 cols=50 name="tweet"></textarea></p>
+<p><input type="submit" value="Tweet"/>
+</form>
+</div>
+</body>
+</head>
+</html>
+
